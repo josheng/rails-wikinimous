@@ -1,0 +1,10 @@
+<% @articles.each do |article| %>
+<div class="container">
+  <div class="row justify-content-center m-3">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3><%= link_to article.title, article_path(article)  %></h3>
+      <p><%= article.content %></p>
+    </div>
+  </div>
+</div>
+<% end %>

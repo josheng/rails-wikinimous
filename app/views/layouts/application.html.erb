@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c8313c1fd0.js" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-light">
+  <%= link_to "Wikinimous", articles_path, class: "navbar-brand" %>
+  <form class="form-inline">
+    <%= link_to "New Article", new_article_path ,class: "btn btn-outline-success my-2 my-sm-0" %>
+    <%# <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a> %>
+  </form>
+  </nav>
     <%= yield %>
   </body>
 </html>

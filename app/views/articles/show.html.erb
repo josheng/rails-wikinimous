@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row justify-content-center m-3">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1><%= @article.title %>
+        <small>
+          <%= link_to "", edit_article_path(@article), class: "fas fa-edit fa-sm p-1 small"  %>
+          <%= link_to "", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: "fas fa-trash fa-sm p-1 small"  %>
+        </small>
+      </h1>
+      <p><%= @article.content %></p>
+    </div>
+  </div>
+</div>

@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Starting seed 🌱"
+
+10.times do
+  puts "Generating entry"
+  Article.create(
+    title: Faker::Fantasy::Tolkien.character,
+    content: Faker::Fantasy::Tolkien.poem
+  )
+end
+
+puts "Seed completed ✅"
